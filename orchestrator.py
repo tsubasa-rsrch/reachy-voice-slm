@@ -138,16 +138,8 @@ def detect_language(text: str) -> str:
 # ---------------------------------------------------------------------------
 # SLM Client — stateless wrapper around an OpenAI-compatible endpoint
 # ---------------------------------------------------------------------------
-SYSTEM_PROMPT = {
-    "role": "system",
-    "content": (
-        "You are a tool-calling model working on:\n"
-        f"<task_description>{TASK_DESCRIPTION}</task_description>\n\n"
-        "Respond to the conversation history by generating an appropriate tool call that "
-        "satisfies the user request. Generate only the tool call according to the provided "
-        "tool schema, do not generate anything else. Always respond with a tool call.\n\n"
-    ),
-}
+# No system prompt — model was fine-tuned without one.
+# Adding a system prompt hurts accuracy.
 
 
 class SLMClient:
@@ -164,14 +156,13 @@ class SLMClient:
         """Send full conversation history to the SLM and return a parsed
         function-call dict ``{"name": ..., "arguments": ...}`` or an error
         string."""
-        messages = [SYSTEM_PROMPT] + conversation_history
+        messages = list(conversation_history)
 
         chat_response = self.client.chat.completions.create(
             model=self.model_name,
             messages=messages,
             temperature=0,
             tools=TOOLS,
-            tool_choice="required",
             extra_body={"chat_template_kwargs": {"enable_thinking": False}},
         )
         response = chat_response.choices[0].message
@@ -430,7 +421,16 @@ def evaluate(slm: SLMClient, test_path: str, debug: bool = False) -> dict:
             conversation = json.loads(example["question"])
             expected = json.loads(example["answer"])
 
-            result = slm.invoke(conversation)
+            try:
+                result = slm.invoke(conversation)
+            except Exception as e:
+                errors.append({
+                    "input": conversation[-1]["content"],
+                    "expected": expected,
+                    "got": f"ERROR: {e}",
+                })
+                total += 1
+                continue
 
             total += 1
 

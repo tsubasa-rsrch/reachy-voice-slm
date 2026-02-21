@@ -99,3 +99,35 @@
 {"question": "[{\"role\": \"user\", \"content\": \"おはよう\"}, {\"role\": \"assistant\", \"content\": \"\", \"tool_calls\": [{\"type\": \"function\", \"function\": {\"name\": \"greeting\", \"arguments\": {}}}]}, {\"role\": \"user\", \"content\": \"リヒトにご飯だよって呼んで\"}]", "answer": "{\"name\": \"speak\", \"parameters\": {\"text\": \"リヒト、ご飯だよ！\", \"language\": \"ja\"}}"}
 {"question": "[{\"role\": \"user\", \"content\": \"Tell Licht that dinner is ready\"}]", "answer": "{\"name\": \"speak\", \"parameters\": {\"text\": \"Licht, dinner is ready!\", \"language\": \"en\"}}"}
 {"question": "[{\"role\": \"user\", \"content\": \"Say I miss you in Japanese\"}]", "answer": "{\"name\": \"speak\", \"parameters\": {\"text\": \"会いたいよ\", \"language\": \"ja\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"やっほー\"}]", "answer": "{\"name\": \"greeting\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"おっす\"}]", "answer": "{\"name\": \"greeting\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"What's good\"}]", "answer": "{\"name\": \"greeting\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Sup\"}]", "answer": "{\"name\": \"greeting\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"おいっす\"}]", "answer": "{\"name\": \"greeting\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Wassup\"}]", "answer": "{\"name\": \"greeting\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"よー\"}]", "answer": "{\"name\": \"greeting\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Yo what's up\"}]", "answer": "{\"name\": \"greeting\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Night night\"}]", "answer": "{\"name\": \"goodbye\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Nighty night\"}]", "answer": "{\"name\": \"goodbye\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"じゃあね\"}]", "answer": "{\"name\": \"goodbye\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"バイバイ\"}]", "answer": "{\"name\": \"goodbye\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"頷いて\"}]", "answer": "{\"name\": \"nod\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"うんうん\"}]", "answer": "{\"name\": \"nod\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"うなずいて\"}]", "answer": "{\"name\": \"nod\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"音楽消して\"}]", "answer": "{\"name\": \"stop_music\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"曲消して\"}]", "answer": "{\"name\": \"stop_music\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"音消して\"}]", "answer": "{\"name\": \"stop_music\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"ニコニコして\"}]", "answer": "{\"name\": \"set_emotion\", \"parameters\": {\"emotion\": \"happy\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"にっこりして\"}]", "answer": "{\"name\": \"set_emotion\", \"parameters\": {\"emotion\": \"happy\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"嬉しそうにして\"}]", "answer": "{\"name\": \"set_emotion\", \"parameters\": {\"emotion\": \"happy\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Dance happily\"}]", "answer": "{\"name\": \"dance\", \"parameters\": {\"style\": \"happy\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Dance with energy\"}]", "answer": "{\"name\": \"dance\", \"parameters\": {\"style\": \"energetic\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"楽しく踊って\"}]", "answer": "{\"name\": \"dance\", \"parameters\": {\"style\": \"happy\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Write me a poem\"}]", "answer": "{\"name\": \"intent_unclear\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"How do I cook pasta\"}]", "answer": "{\"name\": \"intent_unclear\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"ねえ聞いて昨日ね\"}]", "answer": "{\"name\": \"intent_unclear\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Can you solve math problems\"}]", "answer": "{\"name\": \"intent_unclear\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"天気教えて\"}]", "answer": "{\"name\": \"intent_unclear\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Tell me a joke\"}]", "answer": "{\"name\": \"intent_unclear\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"明日の予定は\"}]", "answer": "{\"name\": \"intent_unclear\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"What is the capital of France\"}]", "answer": "{\"name\": \"intent_unclear\", \"parameters\": {}}"}

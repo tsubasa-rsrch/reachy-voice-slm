@@ -2,6 +2,8 @@
 fused_model/
 fused_model_4bit/
 adapters/
+adapters_v1/
+mlx_model/
 
 # Python
 __pycache__/
