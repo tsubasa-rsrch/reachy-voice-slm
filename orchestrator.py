@@ -290,12 +290,7 @@ class ReachyOrchestrator:
         if not text:
             return RESPONSES["intent_unclear"][lang]
 
-        # Build reachy_command
-        cmd = f"say:{text}"
-        if motion:
-            cmd = f"{cmd} + {motion}"
-
-        self._send_command(cmd)
+        self._send_command(self._say_cmd(text, speak_lang, motion))
         return f"[speak] {text}"
 
     def _handle_nod(self, lang: str) -> str:
@@ -325,13 +320,13 @@ class ReachyOrchestrator:
         else:
             resp = RESPONSES["play_music_default"][lang]
         # For now, speak the response. Real impl would trigger Spotify.
-        self._send_command(f"say:{resp} + cheerful1")
+        self._send_command(self._say_cmd(resp, lang, "cheerful1"))
         return resp
 
     def _handle_stop_music(self, lang: str) -> str:
         # TODO: integrate with spotify stop
         resp = RESPONSES["stop_music"][lang]
-        self._send_command(f"say:{resp}")
+        self._send_command(self._say_cmd(resp, lang))
         return resp
 
     def _handle_volume(self, args: dict, lang: str) -> str:
@@ -360,7 +355,7 @@ class ReachyOrchestrator:
         else:
             time_str = now.strftime("%I:%M %p")
         resp = RESPONSES["check_time"][lang].format(time=time_str)
-        self._send_command(f"say:{resp} + nod")
+        self._send_command(self._say_cmd(resp, lang, "nod"))
         return resp
 
     def _handle_dance(self, args: dict, lang: str) -> str:
@@ -372,26 +367,41 @@ class ReachyOrchestrator:
     def _handle_greeting(self, lang: str) -> str:
         resp = RESPONSES["greeting"][lang]
         motion = RESPONSE_MOTIONS["greeting"]
-        self._send_command(f"say:{resp} + {motion}")
+        self._send_command(self._say_cmd(resp, lang, motion))
         return resp
 
     def _handle_goodbye(self, lang: str) -> str:
         resp = RESPONSES["goodbye"][lang]
-        self._send_command(f"say:{resp}")
+        self._send_command(self._say_cmd(resp, lang))
         return resp
 
     def _handle_thank_you(self, lang: str) -> str:
         resp = RESPONSES["thank_you"][lang]
         motion = RESPONSE_MOTIONS["thank_you"]
-        self._send_command(f"say:{resp} + {motion}")
+        self._send_command(self._say_cmd(resp, lang, motion))
         return resp
 
     def _handle_unclear(self, lang: str) -> str:
         """Escalate to full LLM (Claude) for complex requests."""
         resp = RESPONSES["intent_unclear"][lang]
-        self._send_command(f"say:{resp} + thinking")
+        self._send_command(self._say_cmd(resp, lang, "thinking"))
         # TODO: forward last user message to Claude via chat mode
         return resp
+
+    # --- Command helpers ---
+
+    def _say_cmd(self, text: str, lang: str, motion: str | None = None) -> str:
+        """Build a say: command with language prefix for reachy_hub TTS routing.
+
+        reachy_hub format: say:en:Hello! or say:こんにちは (default=Japanese/MioTTS)
+        """
+        if lang == "en":
+            cmd = f"say:en:{text}"
+        else:
+            cmd = f"say:{text}"
+        if motion:
+            cmd = f"{cmd} + {motion}"
+        return cmd
 
     # --- Command I/O ---
 
