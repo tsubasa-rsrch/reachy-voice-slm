@@ -1,0 +1,23 @@
+# LoRA fine-tuning config for Qwen3-0.6B tool-calling
+# Target: ReachyMini voice command routing
+
+# LoRA parameters
+lora_layers: 16          # Number of layers to apply LoRA
+lora_parameters:
+  rank: 8                # LoRA rank (small = less overfitting on 100 examples)
+  alpha: 16              # LoRA alpha (typically 2x rank)
+  dropout: 0.05          # Small dropout for regularization
+  scale: 10.0            # Scaling factor
+
+# Training parameters
+learning_rate: 1.0e-4    # Conservative LR for small dataset
+iters: 500               # Training iterations
+batch_size: 2            # Small batch for 100 examples
+val_batches: 10          # Validation batches
+steps_per_report: 25     # Report every 25 steps
+steps_per_eval: 50       # Eval every 50 steps
+save_every: 100          # Save checkpoint every 100 steps
+max_seq_length: 2048     # Max sequence length
+
+# Use mask-prompt to only train on assistant completions
+mask_prompt: true

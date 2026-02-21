@@ -1,0 +1,50 @@
+{"question": "[{\"role\": \"user\", \"content\": \"Yo Tsubasa\"}]", "answer": "{\"name\": \"greeting\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"やっほー\"}]", "answer": "{\"name\": \"greeting\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"What's good\"}]", "answer": "{\"name\": \"greeting\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"おっす\"}]", "answer": "{\"name\": \"greeting\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"See ya\"}]", "answer": "{\"name\": \"goodbye\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"またね\"}]", "answer": "{\"name\": \"goodbye\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Night night\"}]", "answer": "{\"name\": \"goodbye\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Thanks a lot\"}]", "answer": "{\"name\": \"thank_you\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"ありがと\"}]", "answer": "{\"name\": \"thank_you\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Say hi to everyone\"}]", "answer": "{\"name\": \"speak\", \"parameters\": {\"text\": \"hi everyone\", \"language\": \"en\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"みんなにおはようって言って\"}]", "answer": "{\"name\": \"speak\", \"parameters\": {\"text\": \"みんな、おはよう！\", \"language\": \"ja\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Tell Ray to come here\"}]", "answer": "{\"name\": \"speak\", \"parameters\": {\"text\": \"Ray, come here!\", \"language\": \"en\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"いただきますって言って\"}]", "answer": "{\"name\": \"speak\", \"parameters\": {\"text\": \"いただきます\", \"language\": \"ja\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Say good job with a nod\"}]", "answer": "{\"name\": \"speak\", \"parameters\": {\"text\": \"good job\", \"language\": \"en\", \"motion\": \"nod\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Uh can you say uh like welcome\"}]", "answer": "{\"name\": \"speak\", \"parameters\": {\"text\": \"welcome\", \"language\": \"en\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Nod yes\"}]", "answer": "{\"name\": \"nod\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"頷いて\"}]", "answer": "{\"name\": \"nod\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Shake no\"}]", "answer": "{\"name\": \"shake_head\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"嫌だって首振って\"}]", "answer": "{\"name\": \"shake_head\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"What's around you\"}]", "answer": "{\"name\": \"look_around\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"何が見える\"}]", "answer": "{\"name\": \"look_around\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Play some lo-fi\"}]", "answer": "{\"name\": \"play_music\", \"parameters\": {\"query\": \"lo-fi\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"クラシック流して\"}]", "answer": "{\"name\": \"play_music\", \"parameters\": {\"query\": \"classical\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Play Minecraft music\"}]", "answer": "{\"name\": \"play_music\", \"parameters\": {\"query\": \"Minecraft\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Turn off the music\"}]", "answer": "{\"name\": \"stop_music\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"音楽消して\"}]", "answer": "{\"name\": \"stop_music\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Volume up\"}]", "answer": "{\"name\": \"volume\", \"parameters\": {\"direction\": \"up\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"もうちょい小さく\"}]", "answer": "{\"name\": \"volume\", \"parameters\": {\"direction\": \"down\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Set volume to 80\"}]", "answer": "{\"name\": \"volume\", \"parameters\": {\"level\": 80}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"音量30にして\"}]", "answer": "{\"name\": \"volume\", \"parameters\": {\"level\": 30}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Do you know what time it is\"}]", "answer": "{\"name\": \"check_time\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"いま何時だっけ\"}]", "answer": "{\"name\": \"check_time\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Let's dance\"}]", "answer": "{\"name\": \"dance\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"ダンスして\"}]", "answer": "{\"name\": \"dance\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Dance happily\"}]", "answer": "{\"name\": \"dance\", \"parameters\": {\"style\": \"happy\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Smile for me\"}]", "answer": "{\"name\": \"set_emotion\", \"parameters\": {\"emotion\": \"happy\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"ニコニコして\"}]", "answer": "{\"name\": \"set_emotion\", \"parameters\": {\"emotion\": \"happy\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Look sad\"}]", "answer": "{\"name\": \"set_emotion\", \"parameters\": {\"emotion\": \"sad\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"泣いた顔して\"}]", "answer": "{\"name\": \"set_emotion\", \"parameters\": {\"emotion\": \"sad\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Show me a surprised face\"}]", "answer": "{\"name\": \"set_emotion\", \"parameters\": {\"emotion\": \"surprised\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"眠い顔して\"}]", "answer": "{\"name\": \"set_emotion\", \"parameters\": {\"emotion\": \"sleepy\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Write me a poem\"}]", "answer": "{\"name\": \"intent_unclear\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"今日の予定は\"}]", "answer": "{\"name\": \"intent_unclear\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"How do I cook pasta\"}]", "answer": "{\"name\": \"intent_unclear\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"ねえ聞いて昨日ね\"}]", "answer": "{\"name\": \"intent_unclear\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Hey\"}, {\"role\": \"assistant\", \"content\": \"\", \"tool_calls\": [{\"type\": \"function\", \"function\": {\"name\": \"greeting\", \"arguments\": {}}}]}, {\"role\": \"user\", \"content\": \"What time is it\"}]", "answer": "{\"name\": \"check_time\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"おはよう\"}, {\"role\": \"assistant\", \"content\": \"\", \"tool_calls\": [{\"type\": \"function\", \"function\": {\"name\": \"greeting\", \"arguments\": {}}}]}, {\"role\": \"user\", \"content\": \"踊って\"}]", "answer": "{\"name\": \"dance\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Play rock music\"}, {\"role\": \"assistant\", \"content\": \"\", \"tool_calls\": [{\"type\": \"function\", \"function\": {\"name\": \"play_music\", \"arguments\": {\"query\": \"rock\"}}}]}, {\"role\": \"user\", \"content\": \"Too loud\"}]", "answer": "{\"name\": \"volume\", \"parameters\": {\"direction\": \"down\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Hi\"}, {\"role\": \"assistant\", \"content\": \"\", \"tool_calls\": [{\"type\": \"function\", \"function\": {\"name\": \"greeting\", \"arguments\": {}}}]}, {\"role\": \"user\", \"content\": \"Look around the room\"}]", "answer": "{\"name\": \"look_around\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"uh hey can you um look over there\"}]", "answer": "{\"name\": \"look_around\", \"parameters\": {}}"}

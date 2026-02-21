@@ -1,0 +1,215 @@
+{
+  "task_description": "You are a voice command router for ReachyMini, a small humanoid robot companion. The user input is automatically transcribed speech from an ASR system, so it may contain transcription errors, filler words, or unusual phrasings. The robot understands both English and Japanese. Parse the user's request and return the appropriate function call despite any transcription artifacts. If you can identify the intent, call the matching function. Extract any mentioned argument values; omit arguments not mentioned. If you cannot understand what the user wants or the request requires complex reasoning, call intent_unclear(). Use conversation history to understand context from previous turns.",
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "speak",
+        "description": "Make the robot say something out loud. Use when the user asks the robot to say, repeat, or tell something.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "text": {
+              "type": "string",
+              "description": "The text for the robot to speak"
+            },
+            "language": {
+              "type": "string",
+              "enum": ["ja", "en"],
+              "description": "Language to speak in. ja=Japanese, en=English"
+            },
+            "motion": {
+              "type": "string",
+              "enum": ["nod", "cheerful1", "laughing1", "thinking", "curious", "neutral"],
+              "description": "Motion to perform while speaking"
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "nod",
+        "description": "Make the robot nod its head. Use for agreement, acknowledgment, yes.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "shake_head",
+        "description": "Make the robot shake its head. Use for disagreement, no.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "look_around",
+        "description": "Make the robot look around using its camera to see what's nearby.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "set_emotion",
+        "description": "Change the robot's facial expression/emotion displayed on screen.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "emotion": {
+              "type": "string",
+              "enum": ["happy", "sad", "angry", "surprised", "thinking", "neutral", "sleepy"],
+              "description": "The emotion to display"
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "play_music",
+        "description": "Play music on Spotify. Use when user asks to play a song, artist, or genre.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "query": {
+              "type": "string",
+              "description": "Song name, artist name, or genre to play"
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "stop_music",
+        "description": "Stop or pause the currently playing music.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "volume",
+        "description": "Change the robot's speaker volume.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "level": {
+              "type": "integer",
+              "description": "Volume level from 0 to 100"
+            },
+            "direction": {
+              "type": "string",
+              "enum": ["up", "down"],
+              "description": "Relative volume change direction"
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "check_time",
+        "description": "Tell the user what time it is.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "dance",
+        "description": "Make the robot perform a dance animation.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "style": {
+              "type": "string",
+              "enum": ["happy", "energetic", "gentle"],
+              "description": "Dance style"
+            }
+          },
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "greeting",
+        "description": "User is greeting the robot or starting a conversation.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "goodbye",
+        "description": "User is ending the conversation or saying goodnight.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "thank_you",
+        "description": "User is expressing gratitude or thanks.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "intent_unclear",
+        "description": "Cannot determine intent, or the request requires complex reasoning, conversation, or knowledge that should be escalated to a full LLM.",
+        "parameters": {
+          "type": "object",
+          "properties": {},
+          "required": []
+        }
+      }
+    }
+  ]
+}

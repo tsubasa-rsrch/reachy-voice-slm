@@ -1,0 +1,15 @@
+# Model files (too large for git)
+fused_model/
+fused_model_4bit/
+adapters/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# MLX
+data/mlx/
+
+# OS
+.DS_Store
