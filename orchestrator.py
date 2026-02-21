@@ -156,7 +156,22 @@ class SLMClient:
         """Send full conversation history to the SLM and return a parsed
         function-call dict ``{"name": ..., "arguments": ...}`` or an error
         string."""
-        messages = list(conversation_history)
+        messages = []
+        for msg in conversation_history:
+            msg = dict(msg)
+            # Serialize tool_calls arguments to JSON strings (API requirement)
+            if "tool_calls" in msg and msg["tool_calls"]:
+                tool_calls = []
+                for tc in msg["tool_calls"]:
+                    tc = dict(tc)
+                    if "function" in tc:
+                        fn = dict(tc["function"])
+                        if isinstance(fn.get("arguments"), dict):
+                            fn["arguments"] = json.dumps(fn["arguments"])
+                        tc["function"] = fn
+                    tool_calls.append(tc)
+                msg["tool_calls"] = tool_calls
+            messages.append(msg)
 
         chat_response = self.client.chat.completions.create(
             model=self.model_name,

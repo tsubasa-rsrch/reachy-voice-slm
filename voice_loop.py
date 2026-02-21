@@ -25,7 +25,7 @@ ROBOT_HOST = os.getenv("REACHY_HOST", "100.127.25.93")
 ROBOT_USER = os.getenv("REACHY_USER", "pollen")
 ROBOT_PASS = os.getenv("REACHY_PASS", "root")
 WHISPER_URL = "http://localhost:{port}/v1/audio/transcriptions"
-MODEL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fused_model_4bit")
+MODEL_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fused_model_v2_4bit")
 
 # SSH with ControlMaster (reuse reachy_hub's persistent connection)
 SSH_MUX_DIR = "/tmp/ssh_mux"

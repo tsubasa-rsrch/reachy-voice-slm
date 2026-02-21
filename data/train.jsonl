@@ -131,3 +131,22 @@
 {"question": "[{\"role\": \"user\", \"content\": \"Tell me a joke\"}]", "answer": "{\"name\": \"intent_unclear\", \"parameters\": {}}"}
 {"question": "[{\"role\": \"user\", \"content\": \"明日の予定は\"}]", "answer": "{\"name\": \"intent_unclear\", \"parameters\": {}}"}
 {"question": "[{\"role\": \"user\", \"content\": \"What is the capital of France\"}]", "answer": "{\"name\": \"intent_unclear\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"ありがと\"}]", "answer": "{\"name\": \"thank_you\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"どうも\"}]", "answer": "{\"name\": \"thank_you\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"助かった\"}]", "answer": "{\"name\": \"thank_you\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"ありがとね\"}]", "answer": "{\"name\": \"thank_you\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Thanks dude\"}]", "answer": "{\"name\": \"thank_you\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"クラシック流して\"}]", "answer": "{\"name\": \"play_music\", \"parameters\": {\"query\": \"classical\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"ロック流して\"}]", "answer": "{\"name\": \"play_music\", \"parameters\": {\"query\": \"rock\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"BGM流して\"}]", "answer": "{\"name\": \"play_music\", \"parameters\": {\"query\": \"BGM\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"なんか流して\"}]", "answer": "{\"name\": \"play_music\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"曲流して\"}]", "answer": "{\"name\": \"play_music\", \"parameters\": {}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"チルい曲流して\"}]", "answer": "{\"name\": \"play_music\", \"parameters\": {\"query\": \"chill\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"ニコニコして\"}]", "answer": "{\"name\": \"set_emotion\", \"parameters\": {\"emotion\": \"happy\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"にこにこして\"}]", "answer": "{\"name\": \"set_emotion\", \"parameters\": {\"emotion\": \"happy\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"笑顔見せて\"}]", "answer": "{\"name\": \"set_emotion\", \"parameters\": {\"emotion\": \"happy\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"スマイル\"}]", "answer": "{\"name\": \"set_emotion\", \"parameters\": {\"emotion\": \"happy\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"嬉しい顔して\"}]", "answer": "{\"name\": \"set_emotion\", \"parameters\": {\"emotion\": \"happy\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Play rock music\"}, {\"role\": \"assistant\", \"content\": \"\", \"tool_calls\": [{\"type\": \"function\", \"function\": {\"name\": \"play_music\", \"arguments\": {\"query\": \"rock\"}}}]}, {\"role\": \"user\", \"content\": \"Too loud\"}]", "answer": "{\"name\": \"volume\", \"parameters\": {\"direction\": \"down\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"音楽かけて\"}, {\"role\": \"assistant\", \"content\": \"\", \"tool_calls\": [{\"type\": \"function\", \"function\": {\"name\": \"play_music\", \"arguments\": {}}}]}, {\"role\": \"user\", \"content\": \"うるさい\"}]", "answer": "{\"name\": \"volume\", \"parameters\": {\"direction\": \"down\"}}"}
+{"question": "[{\"role\": \"user\", \"content\": \"Play some jazz\"}, {\"role\": \"assistant\", \"content\": \"\", \"tool_calls\": [{\"type\": \"function\", \"function\": {\"name\": \"play_music\", \"arguments\": {\"query\": \"jazz\"}}}]}, {\"role\": \"user\", \"content\": \"A bit louder\"}]", "answer": "{\"name\": \"volume\", \"parameters\": {\"direction\": \"up\"}}"}
